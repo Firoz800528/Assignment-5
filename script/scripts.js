@@ -24,7 +24,7 @@ newElement.innerText = currentDate;
 const date = document.getElementById("date");
 date.appendChild(newElement);
 
-//complete-button with history adding
+//complete-button with alert
 const buttons = [
     "complete-btn1",
     "complete-btn2",
@@ -41,21 +41,24 @@ for (const buttonId of buttons) {
 
         alert("Board updated Successfully");
 
+        // number decrease
         const taskNumber = document.getElementById("task-number");
         const number = parseFloat(taskNumber.innerText);
         const sum = number - 1;
         taskNumber.innerText = sum;
 
-// congratulation alert
-if (sum === 0) {
-    alert("congrates!!! You have completed All the current task");
-}
+        // congratulation alert
+        if (sum === 0) {
+            alert("congrates!!! You have completed All the current task");
+        }
 
+        // number increase
         const totalNumber = document.getElementById("total-number");
         const numbers = parseFloat(totalNumber.innerText);
         const total = numbers + 1;
         totalNumber.innerText = total;
 
+        // history adding
         const history = document.getElementById("history");
         const heading = document.getElementById(`card-heading-${buttonId.charAt(buttonId.length - 1)}`).innerText;
         const historyItem = document.createElement("p");
