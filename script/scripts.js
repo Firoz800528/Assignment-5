@@ -13,7 +13,7 @@ document.getElementById("next-btn").addEventListener("click",
 )
 
 //current date=
-const localDate = new Date().toLocaleDateString('bn-BD');
+const localDate = new Date().toLocaleDateString('en-BD');
 const newElement = document.createElement("p");
 newElement.innerText = localDate;
 const date = document.getElementById("date");
@@ -41,6 +41,11 @@ for (const buttonId of buttons) {
         const sum = number - 1;
         taskNumber.innerText = sum;
 
+// congratulation alert
+if (sum === 0) {
+    alert("congrates!!! You have completed All the current task");
+}
+
         const totalNumber = document.getElementById("total-number");
         const numbers = parseFloat(totalNumber.innerText);
         const total = numbers + 1;
@@ -61,6 +66,9 @@ for (const buttonId of buttons) {
         `;
     });
 }
+
+const congratsAlert = document.getElementById("task-number");
+
 
 //clear history btn
 document.getElementById("clr-history-btn").addEventListener("click", function() {
