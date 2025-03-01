@@ -67,9 +67,6 @@ if (sum === 0) {
     });
 }
 
-const congratsAlert = document.getElementById("task-number");
-
-
 //clear history btn
 document.getElementById("clr-history-btn").addEventListener("click", function() {
     document.getElementById("history").innerText= "";
