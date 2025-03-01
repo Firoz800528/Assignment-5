@@ -12,6 +12,13 @@ document.getElementById("next-btn").addEventListener("click",
 }
 )
 
+//current date=
+const localDate = new Date().toLocaleDateString('bn-BD');
+const newElement = document.createElement("p");
+newElement.innerText = localDate;
+const date = document.getElementById("date");
+date.appendChild(newElement);
+
 //complete-button with history adding
 const buttons = [
     "complete-btn1",
@@ -21,7 +28,6 @@ const buttons = [
     "complete-btn5",
     "complete-btn6"
 ];
-
 for (const buttonId of buttons) {
     document.getElementById(buttonId).addEventListener("click", function () {
         this.disabled = true;
