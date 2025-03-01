@@ -12,10 +12,15 @@ document.getElementById("next-btn").addEventListener("click",
 }
 )
 
-//current date=
-const localDate = new Date().toLocaleDateString('en-BD');
+//current local date
+const currentDate = new Date().toLocaleDateString('en-BD', {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+});
 const newElement = document.createElement("p");
-newElement.innerText = localDate;
+newElement.innerText = currentDate;
 const date = document.getElementById("date");
 date.appendChild(newElement);
 
