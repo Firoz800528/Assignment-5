@@ -25,14 +25,7 @@ const date = document.getElementById("date");
 date.appendChild(newElement);
 
 //complete-button with alert
-const buttons = [
-    "complete-btn1",
-    "complete-btn2",
-    "complete-btn3",
-    "complete-btn4",
-    "complete-btn5",
-    "complete-btn6"
-];
+const buttons = ["complete-btn1", "complete-btn2", "complete-btn3", "complete-btn4", "complete-btn5", "complete-btn6"];
 for (const buttonId of buttons) {
     document.getElementById(buttonId).addEventListener("click", function () {
         this.disabled = true;
